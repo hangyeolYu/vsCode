@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    /*링크 부분에 밑줄 없애기*/
+    text-decoration: none;
+}
+
+
+
+
+#container {
+    background-color: aliceblue;
+    color: black;
+    width: 2000px;
+    
+}
+header {
+    width: 100%;
+    height: 100px;
+    background-color: cadetblue;
+}

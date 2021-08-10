@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+
+    }
+    #red{
+        background-color: red;
+        top: 100px;
+        left: 100px;
+        position: relative;
+        /* relative :
+        1)기존 요소를 참고해서 알아서 지정! 
+        2)기존 요소를 기준으로 top,right,reft,bottom 값 사용
+        */
+        
+    }
+    #orange{
+        background-color: orange;
+        top: 100px;
+        left: 100px;
+        position: relative;
+        /* relative :
+        1)기존 요소를 참고해서 알아서 지정! 
+        2)기존 요소를 기준으로 top,right,reft,bottom 값 사용
+        */}
+    #yellow{
+        background-color: yellow;
+        top: 100px;
+        left: 100px;
+        position: relative;
+        /* relative :
+        1)기존 요소를 참고해서 알아서 지정! 
+        2)기존 요소를 기준으로 top,right,reft,bottom 값 사용
+        */}
+    #green{
+        background-color: green;
+        top: 100px;
+        left: 100px;
+        position: relative;
+       /* relative :
+        1)기존 요소를 참고해서 알아서 지정! 
+        2)기존 요소를 기준으로 top,right,reft,bottom 값 사용
+        */}
+        .content{
+            position: absolute;
+            left : 220px;
+            top : 500 px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box" id="red">
+        <div class="box" id="orange">
+            <div class="box" id="yellow">
+                <div class="box" id="green">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        콘텐츠 
+            <!-- 직접지정  -->
+    </div>
+
+</body>
+</html>

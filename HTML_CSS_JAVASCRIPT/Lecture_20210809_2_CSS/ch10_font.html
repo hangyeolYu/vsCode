@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <!-- 텍스트 링크 가져옴!  -->
+    <style>
+        /* body에 있는 글씨 색깔을 바꿔보세요!
+        글씨체도 바꿔보세요! */
+        body{
+            color :purple;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+        }
+        .ali-left{
+            text-align: left;
+            text-decoration: underline greenyellow;
+            /* underline 은 밑줄 */
+
+        }
+        .ali-right{
+            text-align: right;
+            text-decoration: line-through;
+            /* 취소선 */
+        }
+        .ali-center{
+            text-align: center;
+            text-decoration: overline rgb(226, 214, 48);
+            /* 텍스트 위에 줄이생김! */
+
+        }
+        p {
+            text-indent: 100px;
+            /* 뒤쪽으로 땡겨오기~ */
+        }
+        div{
+            font-family:'Gowun Dodum', 'sans-serif';
+        }
+        .other {
+            font-family:  'Indie Flower', cursive ;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Text</h1>
+    <h2 class="ali-left">Left</h2>
+    <h2 class="ali-right">Right</h2>
+    <h2 class="ali-center">Center</h2>
+    <p>Indent (들여쓰기)</p>
+    <br>
+    부모
+    <div>
+        1차 자식 first kids
+        <div>
+            2차 자식 second kids
+            <div>
+                 3차 자식 third kids
+            </div>
+        </div>
+    </div>
+    <div class = "other">다른 자식 any other kids </div>
+</body>
+</html>

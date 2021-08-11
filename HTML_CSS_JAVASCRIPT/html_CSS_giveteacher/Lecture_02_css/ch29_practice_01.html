@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+    <style>
+        *{
+            text-decoration: none;
+            color: rgb(46, 44, 44);
+            box-sizing: border-box;
+        }
+        header{
+            background-color: rgb(167, 164, 164);
+        }
+        .logo-img{
+            width:100px;
+            left:50px;
+
+        }
+        .logo-img :hover{
+            transform: scale(1.5,1.5);
+        }
+        .navigation{
+            background-color: rgb(58, 56, 56);
+        }
+        .navigation a{
+            display:inline-block;
+            padding: 15px;
+            color: rgb(212, 209, 209);
+            /* font-size: 2px;
+            font-family:Arial, Helvetica, sans-serif; */
+        }
+        .navigation a:hover{
+            background-color: cornflowerblue;
+        }
+        .product-img{
+            width: 400px;
+            
+        
+            
+        }
+        section{
+            float:left;
+            
+           
+        }
+        .last{
+            width: 1600px;
+        margin:auto;
+        }
+        .foot{
+            text-align:center;
+           
+            display:inline-block;
+            background-color:rgb(189, 185, 185);
+           
+           
+        }
+        th {
+            border: 1px solid black;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">회원가입</a>&nbsp;&nbsp;
+        <a href="#">로그인</a>&nbsp;&nbsp;
+        <input type="text" name="search" placeholder="search"></input>
+        <button>검색</button>
+        <br>
+        <img src="./img/main.png" alt="이미지 분실~" class="logo-img">
+
+    </header>
+    <nav class="navigation">
+        <a href="베스트">베스트</a>
+        <a href="세일중">세일중</a>
+        <a href="기획중">기획중</a>
+        <a href="이벤트">이벤트</a>
+    </nav>
+    <main class="last">
+        <section>
+            <h2>건조기</h2>
+            <img src="./img/swead.jpeg" class="product-img">
+            <ul>
+                <li>트롬의류건조기</li>
+                <li>히트펌프식</li>
+                <li>16kg</li>
+                <li>모던스테인레스</li>
+                <li>1,669,000</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매">
+                <input type="button" value="장바구니">
+            </div>
+        </section>
+        <section>
+            <h2>일반세탁기</h2>
+            <img src="img/real.jpeg" class="product-img">
+            <ul>
+                <li>통돌이</li>
+                <li>DD모터</li>
+                <li>16kg</li>
+                <li>미드프리실버</li>
+                <li>574,500</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매">
+                <input type="button" value="장바구니">
+            </div>
+        </section>
+        <section>
+            <h2>의류관리기</h2>
+            <img src="img/three.jpeg" class="product-img">
+            <ul>
+                <li>트롬의류건조기</li>
+                <li>히트펌프식</li>
+                <li>16kg</li>
+                <li>모던스테인레스</li>
+                <li>1,669,000</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매">
+                <input type="button" value="장바구니">
+            </div>
+        </section>
+        <section>
+            <h2>드럼세탁기</h2>
+            <img src="img/Last.jpeg" class="product-img">
+            <ul>
+                <li>트윈워시</li>
+                <li>DD모터</li>
+                <li>21kg+4kg</li>
+                <li>모던스테인레스</li>
+                <li>1,546,000</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매">
+                <input type="button" value="장바구니">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="foot">
+        <table>
+            <tr>
+            <th><a href="#">회사소개</a></th>
+            <th><a href="#">이용약관</a></th>
+            <th><a href="#">전재금융거래약관</a></th>
+            <th><a href="#">개인정보처리방침</a></th>
+            <th><a href="#">고객센터</a></th>
+        </tr>
+        </table>
+   
+    </footer>
+    
+</body>
+</html>

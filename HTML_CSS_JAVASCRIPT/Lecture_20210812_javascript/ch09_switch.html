@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+      let a=new Date().getDay(); //새로운 객체 이므로 new 필요함!
+      document.write(a);
+      //일:0
+      //월:1
+      //화:2
+      //....
+        let day;
+      switch(a){
+          //== (동등 연산자만 가능)
+          case 0:
+              day="일";
+              break;//대입하고 스위치 문 종료
+              case 0:
+              day="월";
+              break;//대입하고 스위치 문 종료
+              case 1:
+              day="화";
+              break;//대입하고 스위치 문 종료
+              case 2:
+              day="수";
+              break;//대입하고 스위치 문 종료
+              case 3:
+              day="목";
+              break;//대입하고 스위치 문 종료
+              case 4:
+              day="금";
+              break;//대입하고 스위치 문 종료
+              case 5:
+              day="토";
+              break;//대입하고 스위치 문 종료
+              default:
+                  day="오류!"
+
+      }
+      document.write(day);
+  </script>  
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        //배열 생성(데이터 자료형 동일하지않아도 상관이 없음)
+        let arr = [1,1.5,"hello",function(){alert('함수호출!')}];
+        
+        //1.for 문
+        for(let i = 0;i <arr.length;i++){
+            document.write(arr[i]+"<br>");
+            document.write(typeof(arr[i])+"<br>");
+        }
+        document.write("<br><br>");
+        //2. for-in 문
+        //"배열 원소"가 담기는것이 아닌 "배열 인덱스"추출(담음)
+        for(let ele in arr){
+            document.write(ele + "<br>");//0~3 인덱스 추출
+            document.write(arr[ele]+"<br>");
+            document.write(typeof(arr[ele])+"<br>");
+        }
+        document.write("<br><br>");
+
+        //3. for-each 문
+        //"배열 원소"담김
+        //arry 객체에서만 사용 가능한 메서드 (map,set X)
+        // array 객체의 함수 
+        arr.forEach(function(value){
+            document.write(value + "<br>");
+        });
+        document.write("<br><br>");
+
+        //4. for -of 문
+        //"배열 원소" 담김
+        for(let elef of arr){
+            document.write(elef + "<br>");
+        }
+
+        //실습 자바 스크립트 요소 안에 html 태그를 넣어서 만들수 있음 
+
+        //: <table><tr><td> 이용해서 테이블 안에 구구단 출력 (2~ 9단)
+            let gugudan = "<table border='1' style=border-collapse:collapse;>";
+                
+                for(var n = 2; n <=9;n++){
+                    gugudan+="<tr>";
+                        //행추가
+                    for(let p =1; p <=9;p++){
+                        gugudan +="<tb style=padding:10px>"+n+"*"+p+"="+(n*p)+"</td>"
+                    }
+                    gugudan +="<br></tr>";
+                }
+                gugudan += "</table>";
+                document.write(gugudan);
+
+                 // 2 세로로 출력하깅 
+        gugudan = "<table border='1' style=border-collapse:collapse;>";
+
+
+for (var mul = 1; mul <= 9; mul++) {
+    gugudan += "<tr>";
+    for (var n = 2; n <= 9; n++) {
+        gugudan += "<td style=padding:10px>" + n + " x " + mul + " = " + (n * mul) + "</td>";
+    }
+    gugudan += "</tr>";
+}
+
+
+gugudan += "</table>";
+document.write(gugudan);
+
+        
+
+    </script>
+</body>
+</html>

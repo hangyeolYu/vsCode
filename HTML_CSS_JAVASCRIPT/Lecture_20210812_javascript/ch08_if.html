@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <div id="outscore">당신의 학점은.....  </div>
+    <!-- div 는 <ASDASDASDAD> -->
+        <!-- <p>는 블록 레벨 -->
+            <!-- 사이에 <span> 태그 사용시  -->
+                <!-- <ASDAS<DDA>SDAD> -->
+    
+    <script>
+        /*
+        자바스크립트 조건문
+        */
+
+        let x=10;
+        if(x>0){
+            document.write("양수 <br>");
+        }
+        else if(x==0){
+            document.write("0 <br>");
+        }
+        else{
+            document.write("음수 <br>");
+        }
+        let output= document.getElementById("output");
+        let age = "20";
+        if(age>=19){
+            output.innerHTML += "성인 <br>";
+        }
+        else if (age >=8){
+            output.innerHTML += "학생 <br>";
+        }
+        else {
+            output.innerHTML += "애긩 <br>";
+        }
+            //div 로 결과값을 반환해주기 때문에 이게 먼저 나옴 !
+
+            //Q1. 사용자에게 국어,영어,수학 점수를 입력받아서 
+            //평균이 90점 이상이면 A
+            // 평균이 80점 이상,90점 미만 B
+            //평균이 70점 이상 , 80점 미만 C
+            //평균이 60점 이상,70 점 미만 D
+            //나머지 F
+            //html 요소 중에서 div 태그 요소에 출력 
+
+        let outscore = document.getElementById("outscore"); 
+        let kor = Number(prompt('국어 점수를 입력해주세여',1));
+        let eng = Number(prompt('영어 점수를 입력해주세여',1));
+        let math = Number(prompt('수학 점수를 입력해주세여',1)); //문자열의 결합이 일어나서 형변환을 해줘야함 !
+        //위에 div에 문자열 데이터가 있음 
+        let score = (kor + eng + math) / 3;
+        if(score >=90){
+            outscore.innerHTML +="A 입디다";
+        }
+        else if(score >=80){
+            outscore.innerHTML +="B 입디다";
+        }
+        else if(score >=70){
+            outscore.innerHTML +="C 입디다";
+        }
+        else if(score >=60){
+            outscore.innerHTML +="D 입디다";
+        }
+        else {
+            outscore.innerHTML += "F 입디다 재수강~";
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 1.문자열 연결 연산자 : +
+        let a =1 + '234';
+        document.write(a + " ");
+        document.write(typeof(a)+"<br>");
+        document.write("==================<br>")
+
+
+        // 2.산술 연산자 : +,-,*,/,%,**
+        document.write(10+20+"<br>");
+        document.write(10-20+"<br>");
+        document.write(10*20+"<br>");
+        document.write(10/20+"<br>");
+        //정수 / 실수 = 실수
+        document.write(10%20+"<br>");
+        document.write(3**2 + "<br>");// 3^2
+        document.write("==================<br>")
+
+
+
+
+        // 3.증감 연산자 ++,--
+        let b=1;
+        document.write(b++ + "<br>");
+        //a.document.write(b); //1
+        //b. b++;//2
+        document.write(++b + "<br>");
+        //a.++b; //3
+        //b.document.write(b)//3
+        document.write(b-- + "<br>");
+        // document.write(b)//3
+        // b--; ==2
+
+        document.write(--b + "<br>");
+        // --b; ==1
+        // document.write(b)//1
+
+
+        // 4.관계 연산자 >,>=,<,<=,==,!=
+        document.write(10>9);
+        document.write("<br>");
+        document.write(10>=9);
+        document.write("<br>");
+        document.write(10<9);
+        document.write("<br>");
+        document.write(10<=9);
+        document.write("<br>");
+        document.write(10==9);
+        document.write("<br>");
+        document.write(10!=9);
+        document.write("<br>");
+        document.write(1<2<3);
+        document.write("<br>");
+        document.write(1<=2<=3);
+        document.write("<br>");
+        document.write(1==2==3);
+        document.write("<br>");
+        document.write(1<3<2);
+        //자바 스크립트
+        //1<3<2
+        //(1<3)<2
+        //true(1) < 2 트루 값을 Number()하면 1
+        // 그 1을 비교함! 
+        // true
+
+        //파이썬
+        //1<3<2
+        //1<3 and 3<2
+        //false 
+        
+
+        // 5.논리 연산자: && || !
+        document.write((1<2)&&(2<3));
+        document.write("<br>");
+        document.write((2<1)&&(2<3));
+        document.write("<br>");
+        document.write((1<2)||(2<3));
+        document.write("<br>")
+        document.write((2<1)||(3<2));
+        document.write("<br>");
+        // 6.복합 대입 연산자 : +=,-=,*=
+        let x=1;
+        let y =2;
+        x += y; // x = x+y;
+
+        document.write(x)
+        document.write("<br>");
+
+        x=1;
+        y=2;
+        x -=y; // x = x-y;
+
+        document.write(x);
+        document.write("<br>");
+
+        x=1;
+        y=2;
+        x *=y; // x= x*y;
+
+        document.write(x);
+        document.write("<br>");
+
+        // 7.삼항 연산자 : () ? 참 결과 : 거짓 결과 
+
+        x = 1;
+        y = 2;
+        document.write((x> y) ? "x" + x: "y" + y);
+        document.write("<br>");
+        //if (x>y )==true x:
+        //else (x>y)!= true :y; 
+
+        // 8.비트 연산자 
+
+        //9.(관계 연산자 일부)동등 연산자 (==,!=,===,!==)
+
+        document.write(1=="1"); //true
+        document.write("<br>");
+
+        document.write(1==="1"); //false (내용,데이터 타입 같으면 true)
+        document.write("<br>");
+
+        document.write(2 != "3");//true
+        document.write("<br>");
+        document.write(2 !== "2");//true (내용이나 데이터 타입(둘중 하나라도 )이 다르면 )
+        document.write("<br>");
+
+        
+        
+        
+    </script>
+</body>
+</html>

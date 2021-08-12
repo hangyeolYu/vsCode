@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        자료형 (data type)과 변수(variables)
+        
+        
+        자료형
+        :숫자,문자열(''," "),논리형,
+        null(null)(데이터가 없음),undefined
+        (객체인지,문자열인지도 모름 {자료형 타입을 모름})
+
+        변수 선언: 자료형 명시할 필요가 없음(데이터 할당시에 결정)
+        (ES5)
+        :var : 변수 저장 공간
+        -중복 선언 가능
+        ex) vat a= 10;
+            var a =20;
+
+        (ES6)
+        :let : 변수 저장 공간
+        :const : 상수 저장 공간
+        -중복 선언 불가능
+        (already declared)
+
+        var,let : 값의 재할당 가능
+        var a =10;
+        a =20;
+
+        const: 재할당 불가능 (상수 값)
+         assign to constant variable
+
+        const > let > var 
+
+        변수명 규칙
+        -문자 +숫자+특수문자(_,$)조합
+        -첫글자 숫자 X
+        -공백문자 X
+
+        */ 
+
+        
+        var a; //변수선언
+        document.write(a);
+        document.write('<br>');
+        document.write('<br>');
+
+        //변수 초기화
+        //1.객체 : null
+        //2.숫자 : 0
+        //3.문자열 : null
+        //4.논리형 : false
+        //5.객체인지 문자열인지도 모르면 : undefined       
+        
+        a=null;
+        document.write(a + " ");
+        document.write(typeof(a));//자료형 확인(null값도 객체(object))
+        document.write('<br>');
+
+        a='';// 이건문자열임 ㅋ
+        document.write(a + " ");
+        document.write(typeof(a));//자료형 확인
+        document.write('<br>');
+    
+        
+        
+       
+    </script>
+    
+</body>
+</html>

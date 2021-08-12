@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+      /*
+      1.break - 반복문 빠져나옴(jumps out)
+      //switch: switch 를 빠져나옴 
+      //for/while + break: 반복문을 빠져나옴 (**)
+
+      2.continue - 반복문 제시작(jumps over one iteration)
+      
+      */
+     
+    //무한반복문 (페이지 로딩중...)
+    //  while(true){
+    //      document.write("123");
+    //  }
+    //  for(;;){
+    //      document.write("123");
+    //  }
+let text ="";
+    for(let i =0;i <10;i++){
+        if(i==3){break;}
+        text += "number : "+i + "<br>";
+}
+document.write(text);
+
+
+document.write("<br><br><br>");
+text ="";
+    for(let i =0;i <10;i++){
+        if(i%3==0){continue;}
+        text += "number : "+i + "<br>";
+        
+}
+document.write(text);
+
+
+  </script>  
+</body>
+</html>

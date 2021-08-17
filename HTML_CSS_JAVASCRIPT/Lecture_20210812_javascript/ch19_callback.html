@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+/*
+    callback function (콜백 함수)
+    : parameter 로 함수 객체를 전달하는 함수 
+    : 함수 내부에서 callback (실행하겠다 !)
+
+*/
+
+function quizAnswer (answer,printYes,printNo) { //틀 같은 함수임 
+    // answer : 변수
+    //printYes,printNo : 함수 객체 전달 
+
+    if (answer === 'javascript'){ //내용물 ,자료가 같아야함!
+        printYes();
+    }
+    else {
+        printNo();
+    }
+}
+   //익명 함수  
+//    const yes = function() {
+//        console.log('correct!');
+//    };
+//    const no = function (){
+//        console.log('Incorrect!');
+//    }
+//    yes();
+//    no();
+//    console.log(typeof(yes));
+//    console.log(typeof(no));
+
+//arrow function
+const yes = () => console.log('correct!');
+const no = () => console.log('incorrect!');
+
+quizAnswer('java',yes,no); //객체 대신 함수를 넣어준거임!
+quizAnswer('javascript',yes,no);//객체 대신 함수를 넣어준거임!
+
+//콜백 함수를 사용하는 내부 api (foreach)
+let number = [1,2,3,4,5];
+number.forEach(function    (x){
+    console.log(2*x);
+});
+//arrow func 으로 변환 
+number.forEach((x) => console.log(2*x));
+
+
+   </script> 
+</body>
+</html>

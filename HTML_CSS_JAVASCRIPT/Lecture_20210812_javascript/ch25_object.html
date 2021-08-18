@@ -8,8 +8,8 @@
 </head>
 <body>
     <script>
-        //JS 객체 기반의 스크립트 언어 
-        //클래스 : 붕어빵 틀 (메모리 올라가지 않음 )
+        //JS 객체 기반의 스크립트 언어  (프로토 타입 언어가 아님 !)
+        //클래스 : 붕어빵 틀 (메모리 올라가지 않음 ) vs 프로토타입 
         //객체 : 팥 붕어빵,크림 붕어빵,피자 붕어빵  (메모리 올라감 )
         
         //객체 생성 방법 
@@ -56,20 +56,133 @@
             console.log(car.tires[i]);
         }
 
-        //forEach
+        //forEach 얘는 배열객체 함수
         car.tires.forEach(function (arr) {
             console.log(arr)
         });
         //좀더 섹시하게 
         car.tires.forEach((value)=>console.log(value));
+        //for of  앤 걍 문법 ㅋ
+        for(let ele of car.tires){
+            console.log(ele);
+        }
 
         //Q4. car drive() 출력 
         car.drive();
 
         //객체 삭제 
 
-        delete car.model; //특정삭제
+        delete car.model; //특정 속성 참조(주소값만 ) 값 삭제
+        //얘도 가비지 컬렉터가 있음 
         delete car;
+
+        car.price = null;
+        console.log(car.price);
+        //넑값 을 가르킴
+
+        car.price = undefined;
+        console.log(car.price);
+        //undefined 를 가르킴 
+
+        let book = {
+            title:"Harry potter",
+            price:20000,
+            stock:10
+
+        };
+
+        //객체 속성값  변경 (연결 링크 변경)
+        book.price = 15000;
+
+        //새로운 속성 추가 
+        book.author = "J.K.Rowling";
+
+
+        //객체 삭제(링크 변경) delete 보다 속도(**)가 더 빠름! 
+        book.price = null;
+
+
+        //이전에 만든 콘솔들을 더이상 출력하지않음!
+        console.clear();
+
+
+        //book 객체 속성 확인 (순회)
+        for(let b in book){
+            console.log(book[b]);// 대괄호 표기법만 가능! 
+            // console.log(book.b); //마침표 표기법 지원 X
+        };
+
+        //생성자를 통해 객체 생성 
+        //생성자 함수 (함수 이름 첫 글자 대문자로 만듦!)
+
+        function Book (title,price,stock){
+            this.title = title;
+            this.price = price;
+            this.stock = stock;
+        };
+
+        let book1 = new Book("Harry Potter1",20000,10);
+        let book2 = new Book("Harry Potter2",23000,15);
+        let book3 = new Book("Harry Potter3",23000,21);
+
+        //Q1. book1,book2,book3 객체 속성 확인하는 반복문 작성 
+
+        function Formoon (avg){
+            for(let b in avg){
+                console.log(avg[b]);
+            }
+        };
+
+        Formoon(book1);
+        Formoon(book2);
+        Formoon(book3);
+
+        //Q2. book1 ,book2,book3 에 author 속성 추가하고 값도 대입 
+
+        book1.author = "J.K.Rowling";
+        book2.author = "J.K.Rowling";
+        book3.author = "J.K.Rowling";
+
+        //생성자 함수 (Triangle)
+        function Triangle (w,h){
+            if(w==0||h==0){
+                alert("Triangle 생성불가!");
+                return;//비정상적인 종료
+                // return -1; 이렇게 주기도함! 
+            }
+            this.width = Math.abs(w);
+            this.height = Math.abs(h);
+
+            // 배열로 리턴 --1
+            // return [this.width,this.height];
+
+            //객체로 리턴 --2
+            return {
+                width:this.width,
+                height:this.height
+            };
+
+        }
+        //콘솔 클리어 
+        console.clear();
+
+
+        //1.생성자 함수를 통해 객체를 하나 생성을 해보고 속성값 출력 
+
+         let triangle1 = new Triangle(2,4);
+        // Formoon(triangle1);
+
+        //센세 풀이 
+        console.log(triangle1[0]); //width
+        console.log(triangle1[1]); // height 
+
+        //2. 생성자 함수를 통해 객체를 하나 생성을 해보고 속성값 출력 
+        let tri2 = Triangle(100,200);
+        console.log(tri2.width);
+        console.log(tri2.height);
+
+
+
 
 
 

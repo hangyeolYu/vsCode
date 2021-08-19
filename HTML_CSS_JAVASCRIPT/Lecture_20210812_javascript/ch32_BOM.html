@@ -76,6 +76,40 @@
         newWindow2.focus();
         newWindow2.moveBy(20,0);
     }
+
+    //screen 객체 : 사용자의 디스플레이 화면에 대한 정보 저장 객체 
+    console.log(screen.width); //사용자 화면 너비
+    console.log(screen.height);//사용자 화면 높이
+
+    //운영체제의 작업 표시줄 같은 공간을 제외
+    console.log(screen.availwidth); //사용자 화면 너비
+    console.log(screen.availheight);//사용자 화면 높이
+
+    //history 객체 : 브라우저의 history (캐쉬 ㅜcache)기록
+
+    /*
+    history.back(): 웹 브라우저 상단의 < (뒤로가기)
+    history.forward(): 웹 브라우저 상단의 > (앞으로 가기)
+    history.go(값)
+            값:-1 => 이전 페이지 이동
+              -2 => 전전 페이지로 이동
+               1 => 다음 페이지 이동
+               2=> 다다음 페이지 이동   
+    
+    */
+
+    //location 객체 : 현재 페이지 주소 (URL )을 얻기 위한 객체 
+    /*
+      location.href : 현재 페이지의 href (URL)반환
+      location.hostname: 웹 페이지의 도메인 이름 반환 
+      location.pathname : 웹 페이지의 경로/파일 이름 반환
+      location.protocol: 웹 프로토콜 반환 (http:,https:(secure))
+      location.assign(): 새로운 문서 로드 (history 남기기)
+      location.replace(): 새로운 문서 로드 (history 남기지 않고)
+
+    
+    
+    */
         
 
     </script>

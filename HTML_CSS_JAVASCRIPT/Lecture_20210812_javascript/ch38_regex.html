@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            정규 표현식 (Regular Expression, Regex)
+            :특정 패턴의 문자열을 찾기위한 표현 방식 (형식 언어)
+
+            ex) 010-1111-2222
+        
+        */
+       const regex = /\d{3}-\d{4}-\d{4}/;
+       const res = regex.test('010-1111-2222'); //return true/false
+       console.log(res);
+
+       const text = "Hello My phone number 010-1111-2222 , 010-3333-8888";
+       const resText = text.match(regex);//return array
+       const resTeㅌt3 = text.search(regex);//return index(없으면 -1)
+       console.log(resText);
+       console.log(resTeㅌt3);
+
+       const regex2 = /[\w\-\.]+\@[\w\-\.]+/ig;
+       const text2 = "Hello !My email hanguil33@gmail.com, qwerty12342@naver.com";
+       const resText2 = text2.match(regex2);
+       console.log(resText2);
+       
+    </script>
+</body>
+</html>

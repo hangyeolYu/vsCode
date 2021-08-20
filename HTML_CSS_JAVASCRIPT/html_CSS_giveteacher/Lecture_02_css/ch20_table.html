@@ -7,59 +7,58 @@
     <title>Document</title>
     <style>
         table{
-            border:1px solid black;
-            /* border-collapse: collapse; */
-            /* 
-            collapse : 붕괴하다 
-            테이블의 테두리가 한줄만 생김 */
-            border-spacing: 10px;
-            /* 보더들 사이에 간격을 지정가능 */
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+            /* collapse: 붕괴하다 */
+            /* 테이블의 테두리가 한 줄만 생김 */
+            /* border-spacing: 10px; */
+            /* border 사이 간격 지정 */
         }
-        th,td{
-            /* th 이거나 td일때 */
-            border:1px solid black;
+
+        th, td {
+            border: 1px solid black;
             padding: 10px;
             vertical-align: middle;
-            /* 수직 방향으로 정렬 
-                top,middle,bottom*/
-
+            /* 수직 방향 정렬
+            :  top, middle, bottom */
         }
-        th{
+
+        th {
             background-color: blanchedalmond;
         }
-        tr :hover{
-            /* 마우스를 가져다 됬을때 */
-            background-color: blueviolet;
+
+        tr:hover {
+            background-color: cornflowerblue;
             font-weight: bold;
-            transform: scale(1.5,1.5);
-            /* 커짐! */
+            transform: scale(1.1, 1.1);
         }
+
     </style>
 </head>
 <body>
     <table>
         <tr>
-           <th>이름</th>
-           <th>학년/학기</th>
-           <th>좋아하는 과목</th>
-
+            <th>이름</th>
+            <th>학년/학기</th>
+            <th>좋아하는 과목</th>
         </tr>
         <tr>
-           <td rowspan="2">홍길동</td>
-           <!-- 두칸 합치기  -->
-           <td>3</td>
-           <td rowspan="2">수학</td>
-
+            <td rowspan="2">홍길동</td>
+            <td>3</td>
+            <td rowspan="2">수학</td>
         </tr>
+        <tr>
             <td>2</td>
+        </tr>
         <tr>
             <td rowspan="2">홍길순</td>
-            <!-- 두칸 합치기  -->
             <td>2</td>
             <td rowspan="2">영어</td>
-
         </tr>
-
+        <tr>
+            <td>2</td>
+        </tr>
     </table>
 </body>
 </html>

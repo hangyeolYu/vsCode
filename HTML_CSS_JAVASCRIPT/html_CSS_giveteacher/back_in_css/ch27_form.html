@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 써치 박스 </title>
+    <style>
+        input{
+            border: 5px solid limegreen;
+            padding: 7px 7px 10px 40px;
+            background-image:url("./css/serch_icon.png");
+            background-size: 13%;
+            background-repeat:no-repeat;
+            background-position-y: 5px;
+        }
+        input:focus{
+            outline: none; 
+            /* 클릭헀을때 빤딱 거리는거 사라짐  */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <label for="search-box">검색</label>
+        <!-- for 를 하면 포커싱이 바뀜!  -->
+        <input type="text" id="search-box" placeholder="search.."/>
+     </div>
+     <!-- placeholder 와 아이콘 활용  -->
+    
+</body>
+</html>
